@@ -1,8 +1,13 @@
   h1 {
     font-family: purepro;
+    color: white;
   }
 
   @font-face {
     font-family: purepro;
     url ("assets/fonts/pureprofont.ttf") format("truetype");
   }
+
+body {
+  background: black;
+}
