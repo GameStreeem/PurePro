@@ -1,37 +1,43 @@
-<head>
-  <link rel="stylesheet" href="styles/style.css">
-  <title>PurePro4561 >> All Your Favorite Games In One Place</title>
-</head>
-<body>
-<center>
+<head>  
+  <link rel="stylesheet" href="styles/style.css">  
+  <title>PurePro4561 >> All Your Favorite Games In One Place</title>  
+</head>  
+  
+<body>  
   <nav class="nav-bar">  
-  <ul>  
-   <li><a href="#">Home</a></li>  
-   <li><a href="#">About</a></li>  
-   <li><a href="#">Contact</a></li>  
-  </ul>  
-</nav>
-<h1>PurePro4561</h1>
-</center>
+   <ul>  
+    <li><a href="#" class="nav-button">Home</a></li>  
+    <li><a href="#" class="nav-button">About</a></li>  
+    <li><a href="#" class="nav-button">Contact</a></li>  
+   </ul>  
+  </nav>  
+  <div class="landing-page">  
+   <h1>PurePro4561</h1>  
+   <p>Welcome to PurePro4561, your one-stop destination for all your favorite games!</p>  
+   <button class="play-button"><a href="games.html" class="play">Play Now!</a></button>  
+  </div>  
 </body>
 
+
 <style>
-          h1 {
-    font-family: purepro;
-    color: white;
-    size: 40px;
-  }
-
-  @font-face {
-    font-family: purepro;
-    src: url("assets/fonts/pureprofont.ttf");
-  }
-
-body {
-  background: black;
-}
-
-  .nav-bar {  
+         /* styles/style.css */  
+  
+h1 {  
+  font-family: purepro, Arial, sans-serif;  
+  color: white;  
+  font-size: 40px;  
+}  
+  
+@font-face {  
+  font-family: purepro;  
+  src: url("assets/fonts/pureprofont.ttf");  
+}  
+  
+body {  
+  background: black;  
+}  
+  
+.nav-bar {  
   position: fixed;  
   top: 20px;  
   left: 0;  
@@ -62,18 +68,46 @@ body {
 .nav-bar li:last-child {  
   margin-right: 0;  
 }  
+
+.play-button a {
+  text-decoration: none;
+  font-family: purepro;
+}
   
 .nav-bar a {  
   text-decoration: none;  
-  font-family: purepro; /* change font to sans-serif */  
-  font-size: 18px; /* increase font size */  
-  color: red;  
-  transition: 0.8s ease;  
+  font-family: purepro;  
+  font-size: 18px;  
+  color: white;  
+  transition: color 0.2s ease;  
 }  
   
 .nav-bar a:hover {  
+  color: red;  
+  font-size: 20px;  
+}  
+  
+.landing-page {  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  justify-content: center;  
+  height: 100vh;  
+  padding: 20px;  
+}  
+  
+.play-button {  
+  background-color: #4CAF50;  
   color: white;  
-  font-size: 20px;
+  padding: 10px 20px;  
+  border: none;  
+  border-radius: 5px;  
+  cursor: pointer;  
+  font-size: 18px;  
+}  
+  
+.play-button:hover {  
+  background-color: #3e8e41;  
 }
 
 
