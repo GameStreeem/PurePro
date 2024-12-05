@@ -16,9 +16,7 @@
    <p>Welcome to PurePro4561, your one-stop destination for all your favorite games!</p>  
    <button class="play-button">  
     Play Now!  
-    <div class="hoverEffect">  
-      <div></div>  
-    </div>  
+  </div>  
    </button>  
   </div>  
 </body>
@@ -106,63 +104,20 @@ body {
   overflow: hidden;  
   border-radius: 10rem;  
   transition: all 0.02s;  
-  font-weight: bold;  
   cursor: pointer;  
   color: black;  
   z-index: 0; 
   font-family: purepro;
+  background: white;
 }  
   
 .play-button:hover {  
-  background: rgb(193, 228, 248);  
-  color: rgb(33, 0, 85);  
+  background: black;  
+  color: red;  
 }  
   
 .play-button:active {  
   transform: scale(0.97);  
 }  
-  
-.hoverEffect {  
-  position: absolute;  
-  bottom: 0;  
-  top: 0;  
-  left: 0;  
-  right: 0;  
-  display: flex;  
-  align-items: center;  
-  justify-content: center;  
-  z-index: 1;  
-}  
-  
-.hoverEffect div {  
-  background: rgb(222, 0, 75);  
-  background: linear-gradient(  
-   90deg,  
-   red,  
-   magenta,    
-  );  
-  border-radius: 40rem;  
-  width: 10rem;  
-  height: 10rem;  
-  transition: 0.4s;  
-  filter: blur(20px);  
-  animation: effect infinite 3s linear;  
-  opacity: 0.5;  
-}  
-  
-.play-button:hover .hoverEffect div {  
-  width: 8rem;  
-  height: 8rem;  
-}  
-  
-@keyframes effect {  
-  0% {  
-   transform: rotate(0deg);  
-  }  
-  
-  100% {  
-   transform: rotate(360deg);  
-  }  
-}
 
   </style>
