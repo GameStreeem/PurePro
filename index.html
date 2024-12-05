@@ -14,13 +14,18 @@
   <div class="landing-page">  
    <h1>PurePro4561</h1>  
    <p>Welcome to PurePro4561, your one-stop destination for all your favorite games!</p>  
-   <button class="play-button"><a href="games.html" class="play">Play Now!</a></button>  
+   <button class="play-button">  
+    Play Now!  
+    <div class="hoverEffect">  
+      <div></div>  
+    </div>  
+   </button>  
   </div>  
 </body>
 
 
 <style>
-         /* styles/style.css */  
+ /* styles/style.css */  
   
 h1 {  
   font-family: purepro, Arial, sans-serif;  
@@ -68,21 +73,16 @@ body {
 .nav-bar li:last-child {  
   margin-right: 0;  
 }  
-
-.play-button a {
-  text-decoration: none;
-  font-family: purepro;
-}
   
-.nav-bar a {  
+.nav-button {  
   text-decoration: none;  
-  font-family: purepro;  
+  font-family: purepro, Arial, sans-serif;  
   font-size: 18px;  
   color: white;  
   transition: color 0.2s ease;  
 }  
   
-.nav-bar a:hover {  
+.nav-button:hover {  
   color: red;  
   font-size: 20px;  
 }  
@@ -97,18 +97,73 @@ body {
 }  
   
 .play-button {  
-  background-color: #4CAF50;  
-  color: white;  
-  padding: 10px 20px;  
-  border: none;  
-  border-radius: 5px;  
+  display: inline-flex;  
+  align-items: center;  
+  justify-content: center;  
+  padding: 15px 30px;  
+  border: 0;  
+  position: relative;  
+  overflow: hidden;  
+  border-radius: 10rem;  
+  transition: all 0.02s;  
+  font-weight: bold;  
   cursor: pointer;  
-  font-size: 18px;  
+  color: rgb(37, 37, 37);  
+  z-index: 0;  
+  box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);  
 }  
   
 .play-button:hover {  
-  background-color: #3e8e41;  
+  background: rgb(193, 228, 248);  
+  color: rgb(33, 0, 85);  
+}  
+  
+.play-button:active {  
+  transform: scale(0.97);  
+}  
+  
+.hoverEffect {  
+  position: absolute;  
+  bottom: 0;  
+  top: 0;  
+  left: 0;  
+  right: 0;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  z-index: 1;  
+}  
+  
+.hoverEffect div {  
+  background: rgb(222, 0, 75);  
+  background: linear-gradient(  
+   90deg,  
+   rgba(222, 0, 75, 1) 0%,  
+   rgba(191, 70, 255, 1) 49%,  
+   rgba(0, 212, 255, 1) 100%  
+  );  
+  border-radius: 40rem;  
+  width: 10rem;  
+  height: 10rem;  
+  transition: 0.4s;  
+  filter: blur(20px);  
+  animation: effect infinite 3s linear;  
+  opacity: 0.5;  
+}  
+  
+.play-button:hover .hoverEffect div {  
+  width: 8rem;  
+  height: 8rem;  
+}  
+  
+@keyframes effect {  
+  0% {  
+   transform: rotate(0deg);  
+  }  
+  
+  100% {  
+   transform: rotate(360deg);  
+  }  
 }
-
 
   </style>
