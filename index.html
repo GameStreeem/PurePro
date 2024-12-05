@@ -1,6 +1,14 @@
 <head>
   <link rel="stylesheet" href="styles/style.css">
   <title>PurePro4561 >> All Your Favorite Games In One Place</title>
+  <nav class="nav-bar">  
+  <ul>  
+   <li><a href="#">Home</a></li>  
+   <li><a href="#">About</a></li>  
+   <li><a href="#">Contact</a></li>  
+  </ul>  
+</nav>
+
 </head>
 <body>
 <center>
@@ -23,4 +31,40 @@
 body {
   background: black;
 }
+
+  .nav-bar {  
+  position: fixed;  
+  top: 20px;  
+  left: 50%;  
+  transform: translateX(-50%);  
+  padding: 10px;  
+  border-radius: 20px;  
+  background-color: rgba(255, 255, 255, 0.2); /* frosted glass effect */  
+  backdrop-filter: blur(10px); /* blur the background */  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* subtle shadow */  
+  z-index: 1000; /* ensure it's on top of other elements */  
+}  
+  
+.nav-bar ul {  
+  list-style: none;  
+  margin: 0;  
+  padding: 0;  
+  display: flex;  
+  justify-content: space-between;  
+}  
+  
+.nav-bar li {  
+  margin-right: 20px;  
+}  
+  
+.nav-bar a {  
+  text-decoration: none;  
+  color: #333;  
+  transition: color 0.2s ease;  
+}  
+  
+.nav-bar a:hover {  
+  color: #666;  
+}
+
   </style>
